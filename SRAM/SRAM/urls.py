@@ -7,17 +7,17 @@ from bikeparts.models import Bike, FrontWheel, RearWheel
 class BikeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = Bike 
-        fields = ['brand', 'bike_type', 'weight']
+        fields = ['id','brand', 'bike_type', 'weight']
 # Serializers define the API representation.
 class FrontWheelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = FrontWheel 
-        fields = ['brand', 'size', 'weight']
+        fields = ['id','brand', 'size', 'weight']
 # Serializers define the API representation.
 class RearWheelSerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = RearWheel 
-        fields = ['brand', 'size', 'weight']
+        fields = ['id', 'brand', 'size', 'weight']
 
 # ViewSets define the view behavior.
 class BikeViewSet(viewsets.ModelViewSet):

@@ -5,19 +5,20 @@ from django.views import generic
 from django.utils import timezone
 
 #from .models import Question
+#from .models import Bike
 
 class IndexView(generic.ListView):
-    template_name = 'polls/index.html'
-    context_object_name = 'latest_question_list'
+    #template_name = 'polls/index.html'
+    context_object_name = 'latest_bike_list'
 
     def get_queryset(self):
         """
         Return the last five published questions (not including those set to be
         published in the future).
         """
-        return Question.objects.filter(
+        return Bike.objects.filter(
             pub_date__lte=timezone.now()
-        ).order_by('-pub_date')[:5]
+        ).order_by('-bike')[:5]
 
 
 class DetailView(generic.DetailView):
