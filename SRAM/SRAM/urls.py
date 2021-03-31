@@ -44,7 +44,7 @@ router.register(r'RearWheel', RearWheelViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/', include('rest_framework.urls')),
+    #path('api/', include('rest_framework.urls')),
     path('bikeparts/', include('bikeparts.urls')),
     path('admin/', admin.site.urls),
 ]
